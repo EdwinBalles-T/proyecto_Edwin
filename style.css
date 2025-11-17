@@ -1,13 +1,300 @@
-/* Corrección: se arregló el color del texto y el tamaño de fuente */
+/*--TITULO HEADER <h1> "aeroflex corporation"-------------------------------------------------------------------------*/ 
+      h1{
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222; /* antes estaba en blanco y no se veía */
-    font-size: 16px; /* antes 10px, demasiado pequeño */
-}
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+        font-size:60px;
+        font-weight:bold;
+        font-style:normal;
+        color: hsl(232, 20%, 80%); /*  Color del texto  */
+        border-width: 2px; /*  Grosor del borde  */
+        border-style: solid; /*  Borde visible en pantalla (siempre agregar)  */
+        border-color: oklch(0.2854 0.1944 275.93); /*  Color del borde tipo OKLCH (paleta mas moderna, pagina web "oklch")  */
+        background-color: oklch(0.3518 0.1944 275.93); /*  Color del fondo (relleno) tipo OKLCH  */
+        width: 1385px; /*  Ancho del texto (contenido)  */
+        height:100px; /*  Largo del texto (contenido)  */
+        padding:20px 60px; /*  Relleno del contenido 20px(arriba-abajo) 60px(derecha-izquierda)  */
+        margin:0 0; /*  espacio de margen para separar el elemento de los demas 0 (arriba-abajo) 0 (derecha-izquierda)  */
+        box-sizing:border-box;
+      }
 
-h1 {
-    text-align: center;
-    margin-top: 40px;
-}
+  /*--SUBTITULOS <h2> "formulario de contacto"---------------------------------------------------------------------------*/ 
+      h2{
+        color:oklch(0.3518 0.1944 275.93);
+        font-family: sans-serif; /*  Tipografia de la fuente  */
+        font-size: 25px; /*  tamaño de la fuente (en pixeles)  */
+        font-weight: bold; /*  Grosor de la fuente  */
+      }
+
+  /*--CUERPO COMPLETO VISIBLE <body> "fondo de la pagina"-----------------------------------------------------------------*/     
+      body{
+        background:#657eca; /*  Color del fondo (relleno) en hexadecimal  */
+        color:rgb(0, 0, 0); /*  Color del texto (contenido) en RGB  */
+        font-family:sans-serif;    
+      }
+
+  /*--BOTON EMERGENTE <button> "acceder"-----------------------------------------------------------------------------------*/     
+      #abrir{
+        width:150px;
+        height:28px;
+        background:rgb(29, 29, 169); /*  Color del fondo (relleno) tipo RGB  */
+        color:white;
+        font-family: sans-serif;
+        font-size:15px;
+        font-weight: bold;
+        border:0; /*  Sin borde  */
+      }
+      #abrir:hover{
+        outline:3px solid rgb(2, 149, 194); /*  Borde del boton con OUTLINE (outline es un borde que no ocupa espacio adicional)  */
+        background: rgb(94, 94, 197);
+      }
+      #abrir:active{
+        outline: 3px solid white; /*  Borde del boton con grosor, visible y color  */
+        background: rgb(0, 0, 255);
+      }
+
+  /*--CAMPOS DE TEXTO <input> "color de campos de texto en estado "focus""-----------------------------------------------------------------------------------*/     
+      .campos:focus{
+        outline: blue solid 5px; /*  Borde del boton con color, visible y grosor  */
+      }
+  /*------------------------------------------------------------------------------------------------------------------------*/
+  /*-PSEUDO-CLASE-----------------------------------------------------------------------------------------------------------*/
+  /*------------------------------------------------------------------------------------------------------------------------*/
+
+  /*--LISTA 1 <ul> "FIRST CHILD somos una empresa - NTH-CHILD(2) vendemos tenis - LAST-CHILD nos encontramos ubicados"------------------------------------------*/ 
+      #lista{
+        color:white; 
+        background-color:lch(55.5 52.68 263.37); /*  Color del fondo (relleno) tipo LCH (pagina web "lch")  */
+        font-family: sans-serif;
+        padding: 20px 30px;
+        width: 1505px;
+        box-sizing: border-box;
+        margin:0 0 15px 0; /*  espacio del margen 0 (arriba), 0 (derecha), 15px (abajo), 0 (izquierda)  */
+      }
+      .lista1:first-child{
+        /* el color del texto y demas propiedades se hereda de la #lista  */    
+        border:2px solid; 
+        border-color: currentcolor; /* el currentcolor esta por defecto, establece el color del texto al borde  */
+      }
+      .lista1:nth-child(2){
+        color:rgb(238, 237, 237);  
+        border:2px solid;
+      }
+      .lista1:last-child{
+        color:rgb(202, 202, 202);
+        border:2px solid;
+      }
+   
+  /*--LISTA 2 <ol> "FIRST-CHILD leon -  NTH-CHILD(2) delfin - NTH-CHILD(3) aguila - LAST-CHILD elefante"----------------------------------------------------------------------*/ 
+      #lista2{
+        color:blue;
+        border:3px solid rgb(171, 171, 229);
+        font-family:sans-serif;
+        font-size: 18px;
+        background-color: white; 
+        box-sizing:border-box;    /*  explicado en flexbox  */
+        width: 1505px;
+        height: 120px;
+        align-content: center;    /*  explicado en flexbox  */
+      
+      }
+      .lista3:first-child{
+        color:inherit; /*  hereda el valor del elemento padre  */
+        border:inherit; /*  hereda el valor del elemento padre  */
+      }
+      .lista3:nth-child(2){
+        color:initial; /*  asigna el valor por defecto del navegador o css  */
+        border:inherit; /*  asigna el valor por defecto del navegador o css  */
+      }
+      .lista3:nth-child(3){ 
+        color:unset; 
+        border:inherit; /*  Actua segun si la propiedad es heredable, o no  */
+      }
+      .lista3:last-child{
+        color:red;
+        color:revert; /*  ignora los estilos personalizados actuales, y vuelve al anterior estado  */
+        border:inherit; /*  ignora los estilos personalizados actuales, y vuelve al anterior estado  */
+      }
+
+  
+  /*--MENU DE NAVEGACION <nav> "quienes somos - animales - facebook"--------------------------------------------------------*/ 
+      #menu{
+        font-family:sans-serif;
+        font-size:20px;
+        font-weight: bold;
+        width: 1505px;
+        background-color:lch(55.5 52.68 263.37);
+        color:white;
+        border:2px solid green;
+      
+      }
+
+      .link:first-child{
+        width:180px ;
+        height:30px ;
+        background-color:lch(56.81% 50.4 268.09 / 0.646) ;
+        color:currentColor;
+        
+      }
+      .link:nth-child(2){
+        width:180px ;
+        height:30px ;
+        background-color:lch(56.81% 50.4 268.09 / 0.646) ;
+        color:currentColor;
+      
+      }
+      .link:last-child{
+        width:180px ;
+        height:30px ;
+        background-color:lch(56.81% 50.4 268.09 / 0.646) ;
+        color:currentColor;
+        
+      }
+
+  /*--VIDEO <video> "video corriendo"---------------------------------------------------------------------------------------*/     
+      #video1{
+        width: 1505px;
+        height: 400px;
+        object-fit: cover;
+      }
+
+  /*--AUDIO <audio> "ambientación musical"----------------------------------------------------------------------------------*/     
+      #audio1{
+        width: 1505px;
+      }
+
+  /*--FRAME PAGINA WEB <iframe> "pagina web del exito seccion zapatos"------------------------------------------------------*/     
+      #frameproductos{
+        width:1505px;
+        height:500px;
+      }
+      
+  /*--IMAGEN PRINCIPAL <image> "imagen zapatos"-----------------------------------------------------------------------------*/    
+      #imagen1{
+        height:350px; 
+        width: 350px;
+      }
+
+  /*--SUBTITULO <h2> "¿quienes somos?"--------------------------------------------------------------------------------------*/
+      #subtitulo1{
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color:oklch(0.3518 0.1944 275.93);
+        border:4px solid lch(55.5 52.68 263.37);
+        width: 1497px;
+        height: 50px;
+        margin:0;
+      }
+  /*--PARRAFO <p> "Ven y disfruta de nuestro espacio virtual..."------------------------------------------------------------*/
+      #parrafo1{
+        margin:50px 0px;
+        font-family: sans-serif;
+        font-size:17px;
+      }
+  /*--VENTANA EMERGENTE <dialog> "interfaz de ventana emergente"------------------------------------------------------------*/
+      #modal{
+        background-color: rgba(205, 205, 227, 0.906); /*  color de fondo de ventana emergente, (los 3 primeros numeros representan el color, el cuarto representa "transparencia")  */
+        font-family: sans-serif;
+        font-size: 25px;
+      }
+  /*--BOTON VENTANA EMERGENTE Y PSEUDO-CLASES <button>"cerrar"--------------------------------------------------------------*/
+      #cerrar{
+        width:150px;
+        height:28px;
+        background:rgb(29, 29, 169);
+        color:white;
+        font-family: sans-serif;
+        font-size:15px;
+        font-weight: bold;
+        border:0;
+      }
+
+      #cerrar:hover{
+        outline:3px solid rgb(2, 149, 194);
+        background: rgb(94, 94, 197);
+      }
+
+      #cerrar:active{
+        outline: 3px solid white; 
+        background: rgb(0, 0, 255);
+      }
+
+  /*--BOTON Y PSEUDO-CLASES <button> "pulsa aqui"----------------------------------------------------------------------------*/
+      #boton3{
+        width:150px;
+        height:28px;
+        background:rgb(29, 29, 169);
+        color:white;
+        font-family: sans-serif;
+        font-size:15px;
+        font-weight: bold;
+        border:0;
+        margin:0 0 20px 0;
+
+      }
+      #boton3:hover{
+        outline:3px solid rgb(2, 149, 194);
+        background: rgb(94, 94, 197);
+      }
+      #boton3:active{
+        outline: 3px solid white; 
+        background: rgb(0, 0, 255);
+      }
+
+  /*--IMAGEN <image> "Imagen de leon"---------------------------------------------------------------------------------------*/
+
+      #imagen2{
+        width:50vw; /*  tamaño horizontal de la imagen el texto se adapta al 50% de la pantalla visible  */
+      }
+
+  /*--DESPLEGABLE <section> "seccion desplegables"--------------------------------------------------------------------------*/
+      #seccion2{
+        margin:20px 0;
+      }
+
+  /*--BLOQUE PIE DE PAGINA <footer> "pie de pagina"-------------------------------------------------------------------------*/
+      #piepagina{
+        background-color: rgb(162, 161, 161);
+        padding: 10px 15px;
+        
+      }
+
+  /*--TITULOS <legend> "titulos de formularios"-----------------------------------------------------------------------------*/
+      legend{
+        font-family: sans-serif;
+        font-size:18px;
+        font-weight: bold;
+      }
+
+  /*--CAJAS FORMULARIOS <fieldset> "formularios"----------------------------------------------------------------------------*/
+      fieldset{
+      margin: 15px 0;
+      padding: 10px 20px;
+      }
+
+  /*--BLOQUES EN FORMULARIO <div> "espacios en elementos en formularios"----------------------------------------------------*/
+      .formulario{
+        margin:10px 0; 
+      }
+
+  /*--CAMPOS DE TEXTO <input> "campos de texto en formulario"---------------------------------------------------------------*/
+      input{
+        width: 300px;
+      }
+
+  /*--MENU ANCORES <a> "Menu navegacion de pie de pagina"-------------------------------------------------------------------*/
+      .menu{
+        margin: 0 20px 0 0 ;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+  /*--TEXTOS <h5> "derechos de autor"---------------------------------------------------------------------------------------*/
+
+    h5 {
+    width: 100%;
+    max-width: 1505px;
+    margin: 0 auto; /* centra todo horizontalmente */
+    
+    }

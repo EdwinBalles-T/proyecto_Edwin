@@ -4,18 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Web - Página Principal</title>
-</head>
+<link rel="stylesheet" href="style.css">
+  
+
+</head> 
+<!--------------------------------------------------------------------------------------------------------------------------->
 <body>
-    <header>
-        <h1>Bienvenido al Proyecto GIT</h1>
-    </header>
+  <header>
+    <h1> 🏙 Aeroflex corporation 🏃 </h1> <!-- Título principal del sitio web -->
+    <nav id="menu"> <!-- Menu de navegación -->
+      <a class= "link" href="#parrafo1">¿quienes somos?</a> <!-- Enlace interno que lleva a la sección de la página con el id "quienes somos" -->
+      <a class= "link" href="#animales">animales</a>  <!-- Enlace interno que lleva a la sección con el id "animales" -->
+      <a class= "link" href="https://facebook.com/aeroflex" target="_blank" rel="noreferrer">facebook</a> <!-- Enlace externo que abre la página de Facebook en una nueva pestaña con "Target".
+       El atributo rel="noreferrer" evita que se envíe información del sitio de origen -->
+    </nav>
 
-    <main>
-        <p>Esta es la página principal del proyecto.</p>
-    </main>
 
-    <footer>
-        <p>© 2025 Proyecto GIT</p>
-    </footer>
+    <video autoplay loop muted src="https://www.pexels.com/es-es/download/video/33589210/" width="800px" height="500px"></video> <!-- Reproduce un video en bucle, sin sonido, de forma automática si el navegador lo permite -->
+    <div>
+    <audio autoplay loop controls src="images/future-design-344320 (1).mp3"></audio> <!-- Reproduce un archivo de audio con controles de reproducción visibles -->
+    </div>
+
+  </header>
+<!----------------------------------------------------------------------------------------------------------------------------------->
+  <main> <!-- Contenido principal -->
+
+
+<!--FRAME---------------------------------------------------------------------------------------------------------------------------->
+    <iframe
+    id="frameproductos" 
+        width="100%" 
+        height="700" 
+        src="https://www.exito.com/aeroflex" 
+        title="productos exito aeroflex"
+        frameborder="0"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer;
+              autoplay; 
+              clipboard-write; 
+              encrypted-media; 
+              gyroscope; 
+              picture-in-picture; 
+              web-share"
+    ></iframe> <!--Pagina web dentro de nuestra pagina, con ancho, alto, titulo, eliminacion de borde del frame, permisos de la pagina en nuestra pagina,control de información de referencia, y capcidad de colocar pantalla completa-->
+
+    <p id="parrafo1">Ven y disfruta de nuestro espacio virtual con gran variedad de <strong>zapatos</strong></p> <!-- Párrafo introductorio con énfasis (strong) en la palabra "zapatos" -->
+    <h2 id="subtitulo1">¿Quienes somos?</h2> <!-- Subtítulo de sección sobre la empresa -->
+    <!-- Lista no ordenada (ul) de características de la empresa -->
+    <ul id="lista">  
+      <li class="lista1">somos una empresa dedicada a la venta de zapatos de alta calidad</li>  <!-- Elemento de la lista -->
+      <li class="lista1">Vendemos tenis, zapatos, botas, zandalias para todos</li>
+      <li class="lista1">Nos encontramos ubicados en todas partes del pais</li>
+    </ul>
+    <!--imagen con atributos como ID único para estilos, ruta de img, texto alternativo, alto (px), ancho (px), texto emergente al pasar cursor-->
+    <a href="images/zapato1.webp">
+      <img id="imagen1" 
+          src="images/zapato1.webp"   
+          alt="Zapatos"        
+          title="zapatos"
+          width="200" 
+          height="200" 
+        >  
+    </a>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--VENTANA EMERGENTE (Contenido no visto aun)---------------------------------------------------------------------------------------------------------------------------->
+    <!-- Cuadro de diálogo oculto por defecto. Se usa como ventana emergente (modal) sin usar librerias externas -->
+    <dialog id="modal"> 
+      <h1>bienvenido a esta ventana emergente</h1>
+      <p>navega y explora por nuestra pagina virtual</p>  
+      <button id="cerrar">cerrar</button> 
+    </dialog>
+    <div>
+    <button id="abrir">Acceder</button> 
+    </div>
+    <script>
+      window.abrir.addEventListener('click',() => { 
+      window.modal.showModal();    
+ 
+      })
+    </script>
+    <script>
+    window.cerrar.addEventListener('click',() => { 
+      window.modal.close(); 
+
+    })
+    </script>
+    
+    <!------TRANSFORMACION DOCUMENTO NO SEMANTICO A SEMANTICO--------->
+    <h2 id="animales">Animales</h2><!-- Título principal de la sección de animales -->
+    <aside> <!-- Contenido complementario o secundario -->
+      <h3>Mis animales favoritos</h3> <!-- Subtítulo del contenido adicional -->
+      <ol id="lista2" type="1"> <!-- Lista ordenada numerada -->
+        <li class="lista3">León</li> <!-- Elemento de la lista -->
+        <li class="lista3">Delfín</li>
+        <li class="lista3">Águila</li>
+        <li class="lista3">Elefante</li>
+      </ol>
+    </aside>
+    <section class="padre"> <!-- Sección de contenido principal -->
+      <article class="hijo"> <!-- Artículo individual -->
+        <h4>Hábitat del León</h4> <!-- Subtítulo del artículo -->
+        <p>
+          El león habita en las sabanas y praderas del <strong>África</strong> subsahariana.
+        </p> <!-- Párrafo con información, <strong> resalta el texto -->
+        <small>Características: Mamífero, carnívoro, vive en manadas</small> <!-- Texto complementario -->
+      </article>
+      <article class="hijo">
+        <h4>Comportamiento del Delfín</h4>
+        <p>
+          Los delfines son animales marinos muy inteligentes que se comunican entre sí mediante sonidos.
+        </p>
+        <small>Características: Mamífero acuático, sociable, juguetón</small>
+      </article>
+
+      <article class="hijo">
+        <h4>Curiosidades del Elefante</h4>
+        <p>
+          El elefante es el animal terrestre más grande del mundo y tiene una memoria excepcional.
+        </p>
+        <small>Características: Herbívoro, inteligente, familiar</small>
+      </article>
+    </section>  
+    <!--IMAGEN CON TIEMPO DE CARGA NO PRIORITARIO----------------------------------------------------------------------->
+    <img id="imagen" 
+          src="images/aerofllex.jpg"
+          alt="aeroflex" 
+          title="aeroflex" 
+          loading="lazy" 
+          style="width:100%; aspect-ratio:16/5;"> <!--Carga contenido solo cuando el usuario esta por verlo en pantalla-->
+    
+    <!--DESPLEGABLE----------------------------------------------------------------------->
+    <section id="seccion2">
+      <details> <!-- Bloque desplegable que se puede ver o ocultar al hacer clic-->
+        <summary>¿cuanto miden los colmillos de un elefante?</summary> <!-- Titulo visible de details-->
+        <p>los colmillos miden hasta 3.5m</p>
+      </details>
+      <details> 
+        <summary>¿cuanto IQ tienen los delfines?</summary>
+        <p>los delfines pueden tener hasta 5.26 de iq</p>
+      </details>
+    </section> 
+
+    
+
+  </main> <!-- Cierre de contenido principal -->
+
+  <footer id="piepagina"> <!-- Pie de página del sitio -->
+    <section>  <!-- Sección del pie de página -->
+      <h2>Formulario de contacto</h2> <!-- Título del formulario -->
+      <form method="post" action="/"> <!-- Formulario con metodo de redirecccion de información (sin link en "action") -->
+        <fieldset> <!-- Agrupa campos relacionados e inputs -->
+          <legend>informacion personal</legend> <!-- Título del fieldset -->
+          <div class="formulario">
+            <label>Nombre: 
+              <input class="campos" type="text" name="name" placeholder="digite su nombre"> <!-- Campo de texto -->
+            </label>
+          </div>
+          <div class="formulario">
+            <label>Email: 
+              <input class="campos" type="email" name="email" placeholder="digite su correo"> <!-- Campo de correo -->
+            </label>
+          </div>
+        </fieldset>  
+
+        <fieldset>
+          <legend>informacion adicional</legend>
+          <div class="formulario">
+            <label>Telefono: 
+              <input class="campos" type="tel" name="Telefono" placeholder="digite su numero"> <!-- Campo de teléfono -->
+            </label>
+          </div>
+        </fieldset> 
+        <fieldset>
+            <legend>otros</legend>
+            <label for="contactar"> ¿porque quieres contactar? 
+            </label> <!-- Etiqueta para el select (lista desplegable) -->
+            <div class="formulario">
+              <select>   <!-- Lista desplegable -->
+                <option value="1">trabajo</option> <!-- Alternativas de seleccion de la lista -->
+                <option value="2">preguntas</option>
+                <option value="3">mas informacion</option>
+              </select>
+            </div>
+
+            <div class="formulario">
+              <datalist> <!-- Lista de sugerencias para campo de texto -->
+                <option value="tenis">
+                <option value="botas">
+                <option value="zapatos formales">
+              </datalist>
+              <label>¿que articulo te agrado
+              <input class="campos" list="articulos" name="articulos"> <!-- Campo con autocompletado, hace un llamado a la lista de sugerencias (list=articulos)-->
+              </label>
+            </div>
+        </fieldset>
+        <input id="boton3" type="submit" value="enviar informacion"> <!-- Botón para enviar el formulario -->
+      </form>
+    </section>
+
+    <a class="menu" href="mailto:edsanti.9921@gmail.com">enviar correo</a> <!-- Enlace que abre el programa de correo predeterminado del usuario para enviar un correo a esa dirección -->
+    <a class="menu" href="tel:+573204006342">llama ahora</a>  <!-- Enlace que permite hacer una llamada directa desde dispositivos móviles o aplicaciones con soporte para llamadas -->
+    <a class="menu" href="https://wa.me/3204006342" target="_blank">whatsapp</a> <!-- Enlace que abre un chat directo en WhatsApp con el número indicado.-->
+    <h5>&copy; 2025 - Aeroflex - Todos los derechos reservados</h5> <!-- Derechos de autor -->
+  </footer>  
 </body>
-</html>
+
+
