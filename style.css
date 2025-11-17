@@ -1,0 +1,13 @@
+/* Corrección: se arregló el color del texto y el tamaño de fuente */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222; /* antes estaba en blanco y no se veía */
+    font-size: 16px; /* antes 10px, demasiado pequeño */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
