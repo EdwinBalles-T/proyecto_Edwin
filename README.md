@@ -1,2 +1,2 @@
-
+Generacion de conflicto remoto
 
