@@ -1,2 +1,3 @@
-conflicto locall
+Proyecto GIT - README (edición LOCAL y REMOTA)
+
 
