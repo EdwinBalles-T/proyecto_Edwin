@@ -1,0 +1,15 @@
+Documentación del Proyecto Web
+
+Descripción
+Este proyecto es una aplicación web inicial desarrollada para aprender Git y GitHub mediante el manejo de ramas.
+
+Estructura inicial
+- `index.html`: Página principal del proyecto.
+- `style.css`: Archivo de estilos corregido en la rama `fix/correccion`.
+
+Objetivo del proyecto
+Servir como base para practicar:
+- Control de versiones
+- Flujo de trabajo con ramas
+- Documentación técnica
+- Publicación y mantenimiento en GitHub
