@@ -2,7 +2,7 @@
 
 Este documento registra todos los procesos técnicos realizados durante el proyecto: configuración, creación de ramas, flujo de trabajo, conflictos, uso de Pull Requests, diferencias entre comandos y aprendizajes clave.
 
-# 📌 1. Configuración de Git: Global vs Local
+# 1. Configuración de Git: Global vs Local
 
 ## Configuración global
 
@@ -22,7 +22,7 @@ Se aplica cuando se requiere un nombre o correo distinto por proyecto.
 git config user.name "NombreProyecto"
 git config user.email "correo@proyecto.com"
 
-# 📌 2. Justificación y uso de ramas (branching)
+# 2. Justificación y uso de ramas (branching)
 
 El proyecto utilizó un modelo de trabajo basado en ramas para separar tareas y evitar conflictos en main.
 
@@ -37,7 +37,7 @@ El proyecto utilizó un modelo de trabajo basado en ramas para separar tareas y 
 . Reduce riesgos de errores en producción.
 . Permite revertir cambios sin comprometer el proyecto completo.
 
-# 📌 3. Descripción del conflicto generado
+# 3. Descripción del conflicto generado
 
 Para demostrar manejo de conflictos, se editó la misma línea del archivo README.md en:
 
@@ -64,7 +64,7 @@ El archivo mostró marcadores como:
 | Generacion de conflicto remoto                        |
 | >>>>>>> b7b41cdfb24b5553de4c3e914a8a5114741d0645      |
 ---------------------------------------------------------
-# 📌 4. Resolución del conflicto
+# 4. Resolución del conflicto
 
 El conflicto se resolvió manualmente reemplazando todo por la versión final deseada:
 
@@ -90,7 +90,7 @@ Ejemplo:
 
 git reset --hard HEAD~1
 
-## 🔄 git revert
+## git revert
 
 . Crea un nuevo commit que deshace un commit anterior.
 . No borra historial.
@@ -105,7 +105,7 @@ Conclusión:
 reset = reescribe historia → peligro en equipo
 revert = deshace sin eliminar → recomendado
 
-# 📌 6. Explicación del fork
+# 6. Explicación del fork
 
 Un fork es una copia completa de un repositorio que pasa a ser propiedad del usuario.
 Se usa cuando se quiere contribuir a repositorios que no te pertenecen.
@@ -118,11 +118,11 @@ Permite:
 
 En el proyecto se hizo un fork del repositorio del compañero para enviar un Pull Request.
 
-📌 7. Detalles del Pull Request enviado
+ 7. Detalles del Pull Request enviado
 
 Se realizó un Pull Request hacia el repositorio del compañero:
 
-🔗 https://github.com/frankr0013/Proyecto-venus/pull/8
+ https://github.com/frankr0013/Proyecto-venus/pull/8
 
 Este PR permitió:
 
@@ -130,7 +130,7 @@ Este PR permitió:
 . Usar el flujo de colaboración en GitHub
 . Aplicar buenas prácticas de versionamiento
 
-# 📌 8. Uso del tablero Kanban e Issues
+# 8. Uso del tablero Kanban e Issues
 
 En GitHub Projects se creó un tablero con columnas:
 
@@ -147,7 +147,7 @@ Esto permitió visualizar:
 
 El uso del tablero simuló un entorno real de gestión de proyectos.
 
-# 📌 9. Aprendizajes clave
+# 9. Aprendizajes clave
 
 . Git permite controlar versiones de manera estructurada.
 . Las ramas facilitan organización y trabajo colaborativo.
